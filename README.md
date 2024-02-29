@@ -1,9 +1,9 @@
-# Demo project for my talk at IT-Tage 2023
+# Demo project for my frontend testing talk
 
 For some reason, we still don't like writing test for web-frontends. Most backend developers do it,
 frontend devs often don't. And if they do, they get frustrated. But what can we do?
 
-This repo contains the demo application for my talk at IT-Tage 23, with examples that I use in the talk.
+This repo contains the demo application for my talk about frontend testing, with examples that I use in the talk.
 You can have a look and try out things with this repo.
 
 It is **not** intended to be a fully tested, working and deployable apps. It is an example for project setup
@@ -11,7 +11,7 @@ and unit testing. Please do not copy & paste without thinking. Use this as inspi
 
 ### Mock-Service-Worker
 
-This was not part of the IT-Tage talk. In order to simplify the use of mock-apis, we write a small wrapper
+This was not part of the talk. In order to simplify the use of mock-apis, we write a small wrapper
 around [mswjs.io](https://mswjs.io).
 
 - In [setup.ts](src/test-setup/setup.ts), the file [mock-api.test-helper.ts](src/test-utils/mock-api.test-helper.ts) is

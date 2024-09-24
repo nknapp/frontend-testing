@@ -53,6 +53,7 @@
     "vue-tsc": "^2.1.6"
   },
   "lint-staged": {
+    "*.{ts,js,vue}": "eslint --max-warnings=0 --cache --fix",
     "*.{js,css,md}": "prettier --write"
   }
 }

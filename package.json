@@ -9,6 +9,7 @@
     "dev:server": "vite",
     "dev:unit": "vitest --ui",
     "dev": "run-p dev:*",
+    "test:lint": "eslint .",
     "test:ts": "vue-tsc",
     "test:unit": "vitest run",
     "test": "run-s test:*",

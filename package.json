@@ -13,6 +13,7 @@
     "test:unit": "vitest run",
     "test": "run-s test:*",
     "build": "vue-tsc && vite build",
+    "format": "prettier -w .",
     "preview": "vite preview",
     "prepare": "husky"
   },

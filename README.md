@@ -1,4 +1,4 @@
-# Demo project for my frontend testing talk
+# Demo project for my talks about frontend testing and eslint
 
 For some reason, we still don't like writing test for web-frontends. Most backend developers do it,
 frontend devs often don't. And if they do, they get frustrated. But what can we do?
@@ -23,6 +23,18 @@ around [mswjs.io](https://mswjs.io).
 - The `mock-api.test-helper` module also collects sent requests and exports the function `getSentRequests` so that
   api-calls can be verified in the test. This is a very basic facility, which could be improved, but for this repo,
   I wanted to keep it simple.
+
+## eslint
+
+I created the eslint-config with
+
+```bash
+npm init @eslint/config@latest
+```
+
+and when my way from there. You can check the git-history for the different things I added.
+The branch [orm2024](https://github.com/nknapp/frontend-testing/tree/orm2024) deliberately contains
+some eslint errors. Run `npm run test:lint` to find them.
 
 ## Other References
 

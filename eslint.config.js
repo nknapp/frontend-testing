@@ -39,6 +39,13 @@ export default [
           message: "screen.debug() must be removed",
         },
       ],
+      "no-restricted-syntax": [
+        "error",
+        {
+          selector: "ImportExpression:not([parent.parent.callee.name='retry'])",
+          message: "Import expressions should be wrapped in a retry function",
+        },
+      ],
     },
   },
 ];

@@ -3,13 +3,13 @@ import { afterEach, beforeEach } from "vitest";
 import { ComponentConstructor } from "@/test-utils/types.ts";
 import { createMyRouter } from "@/router/router.ts";
 
-export interface RenderComponentReturn {
-  wrapper: VueWrapper;
+export interface RenderComponentReturn<T> {
+  wrapper: VueWrapper<T>;
 }
 
 type ComponentProps<T extends ComponentConstructor> = InstanceType<T>["$props"];
 
-let wrappers: VueWrapper[] = [];
+let wrappers: VueWrapper<any>[] = [];
 const appDiv = document.createElement("div");
 appDiv.setAttribute("id", "app");
 document.body.append(appDiv);
@@ -23,7 +23,7 @@ document.body.append(appDiv);
 export function renderComponent<T extends ComponentConstructor>(
   component: T,
   props: ComponentProps<T> = {},
-): RenderComponentReturn {
+): RenderComponentReturn<T> {
   const wrapper = mount(component, {
     props,
     attachTo: appDiv,

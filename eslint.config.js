@@ -2,12 +2,16 @@ import globals from "globals";
 import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 import pluginVue from "eslint-plugin-vue";
+import promisePlugin from "eslint-plugin-promise";
+import eslintConfigPrettier from "eslint-config-prettier";
 
 export default [
   { files: ["**/*.{js,mjs,cjs,ts,vue}"] },
   { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
+  promisePlugin.configs["flat/recommended"],
+  eslintConfigPrettier,
   ...pluginVue.configs["flat/essential"],
   {
     files: ["**/*.vue"],

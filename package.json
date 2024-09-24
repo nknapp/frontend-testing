@@ -5,13 +5,15 @@
   "type": "module",
   "license": "",
   "scripts": {
-    "dev": "vite",
+    "dev:preview": "vitest-preview",
+    "dev:server": "vite",
+    "dev:unit": "vitest --ui",
+    "dev": "run-p dev:*",
+    "test:ts": "vue-tsc",
+    "test:unit": "vitest run",
+    "test": "run-s test:*",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint . --max-warnings=0 --ext js,ts,vue",
-    "test:vitest": "vitest --ui",
-    "test:preview": "vitest-preview",
-    "test": "run-p test:vitest test:preview",
     "prepare": "husky install"
   },
   "dependencies": {

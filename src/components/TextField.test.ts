@@ -36,7 +36,6 @@ function renderTextField({
     }),
   );
 
-
   return {
     ...renderResult,
     value,

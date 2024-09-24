@@ -1,6 +1,1 @@
-
-
-
-export function largeModule() {
-
-}
+export function largeModule() {}

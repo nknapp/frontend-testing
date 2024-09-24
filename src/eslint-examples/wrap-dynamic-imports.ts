@@ -6,6 +6,6 @@ import { retry } from "./retry.ts";
 // }
 
 export async function correct() {
-    const { largeModule } = await retry(() => import("./large-module"));
-    return largeModule();
+  const { largeModule } = await retry(() => import("./large-module"));
+  return largeModule();
 }

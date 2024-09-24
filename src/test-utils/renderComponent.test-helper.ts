@@ -9,6 +9,7 @@ export interface RenderComponentReturn<T> {
 
 type ComponentProps<T extends ComponentConstructor> = InstanceType<T>["$props"];
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let wrappers: VueWrapper<any>[] = [];
 const appDiv = document.createElement("div");
 appDiv.setAttribute("id", "app");

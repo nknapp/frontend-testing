@@ -40,15 +40,13 @@ export default [
           message: "screen.debug() must be removed",
         },
       ],
-      // This rule is kept as example, but commented out because the custom-rules plugin
-      // below does the same and has a fix-method in addition
-      // "no-restricted-syntax": [
-      //   "error",
-      //   {
-      //     selector: "ImportExpression:not([parent.parent.callee.name='retry'])",
-      //     message: "Import expressions should be wrapped in a retry function",
-      //   },
-      // ],
+      "no-restricted-syntax": [
+        "error",
+        {
+          selector: "CallExpression[callee.name='showMe']",
+          message: "showMe is a debug tool and must be removed before commit",
+        },
+      ],
     },
   },
   {

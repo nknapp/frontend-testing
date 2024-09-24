@@ -21,7 +21,7 @@ import { user } from "@/test-utils/user.test-helper.ts";
 // be able to test that it properly updates
 function renderTodoList(
   initialTodoList: Todo[],
-): RenderComponentReturn & { todoList: DeepReadonly<Ref<Todo[]>> } {
+): RenderComponentReturn<typeof TodoList> & { todoList: DeepReadonly<Ref<Todo[]>> } {
   initTodosForTest(initialTodoList);
   return {
     todoList: getTodos(),

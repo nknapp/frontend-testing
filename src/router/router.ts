@@ -1,13 +1,14 @@
 import { createRouter, createWebHashHistory } from "vue-router";
+import {retry} from "@/eslint-examples/retry.ts";
 
 export function createMyRouter() {
   return createRouter({
     history: createWebHashHistory(),
     routes: [
-      { path: "/", component: () => import("@/pages/TodosPage.vue") },
+      { path: "/", component: () => retry(() => import("@/pages/TodosPage.vue")) },
       {
         path: "/test/clipboard",
-        component: import("@/pages/test/ClipboardPage.vue"),
+        component: retry(() => import("@/pages/test/ClipboardPage.vue")),
       },
     ],
   });

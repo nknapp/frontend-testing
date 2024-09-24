@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-restricted-imports
 import { debug } from "vitest-preview";
 import "@/mvp.css";
 import "@/main.css";

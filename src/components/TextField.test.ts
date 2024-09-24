@@ -5,13 +5,9 @@ import { defineComponent, ref } from "vue";
 import TextField from "@/components/TextField.vue";
 import { user } from "@/test-utils/user.test-helper.ts";
 
-// <-- eslint no-restricted-* example>
-//
-// import {screen} from "@testing-library/dom";
-// Prohibited via "no-restricted-imports"
-// import {debug} from "vitest-preview";
-//
-// </-- eslint no-restricted-* example>
+import { screen } from "@testing-library/dom";
+
+import { debug } from "vitest-preview";
 
 // Example for how to respect the developer-view on a tested component.
 // The component is rendered in a wrapper component that connects prop values to updat events,
@@ -46,14 +42,9 @@ describe("TextField", () => {
   it("renders label and input field", () => {
     renderTextField({ label: "label", initialValue: "value" });
 
-    // <-- eslint no-restricted-* example>
-    //
-    // Prohibited via "no-restricted-properties" rule
-    // screen.debug()
-    //
-    // debug()
-    //
-    // </-- eslint no-restricted-* example>
+    screen.debug();
+    debug();
+
     expect(dom.getByLabelText("label")).not.toBeNull();
   });
 

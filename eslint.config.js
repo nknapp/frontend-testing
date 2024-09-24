@@ -4,6 +4,7 @@ import tseslint from "typescript-eslint";
 import pluginVue from "eslint-plugin-vue";
 import promisePlugin from "eslint-plugin-promise";
 import eslintConfigPrettier from "eslint-config-prettier";
+import { customRules } from "./eslint-rules/index.js";
 
 export default [
   { files: ["**/*.{js,mjs,cjs,ts,vue}"] },
@@ -39,13 +40,21 @@ export default [
           message: "screen.debug() must be removed",
         },
       ],
-      "no-restricted-syntax": [
-        "error",
-        {
-          selector: "ImportExpression:not([parent.parent.callee.name='retry'])",
-          message: "Import expressions should be wrapped in a retry function",
-        },
-      ],
+      // This rule is kept as example, but commented out because the custom-rules plugin
+      // below does the same and has a fix-method in addition
+      // "no-restricted-syntax": [
+      //   "error",
+      //   {
+      //     selector: "ImportExpression:not([parent.parent.callee.name='retry'])",
+      //     message: "Import expressions should be wrapped in a retry function",
+      //   },
+      // ],
+    },
+  },
+  {
+    plugins: { customRules: customRules },
+    rules: {
+      "customRules/retry-dynamic-imports": "error",
     },
   },
 ];

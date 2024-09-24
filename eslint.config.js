@@ -20,6 +20,25 @@ export default [
   {
     rules: {
       eqeqeq: ["error", "smart"],
+      "no-restricted-imports": [
+        "error",
+        {
+          patterns: [
+            {
+              group: ["vitest-preview"],
+              message: "vitest-preview must be removed",
+            },
+          ],
+        },
+      ],
+      "no-restricted-properties": [
+        "error",
+        {
+          object: "screen",
+          property: "debug",
+          message: "screen.debug() must be removed",
+        },
+      ],
     },
   },
 ];

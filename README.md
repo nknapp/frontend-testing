@@ -49,7 +49,8 @@ some eslint errors. Run `npm run test:lint` to find them.
   - Note that this talk uses an old mock-service-worker version, and jest+webpack
   - [Example repo](https://github.com/cosee/techtalk-2021-10-test-it-mock-it)
   - [Youtube video](https://youtu.be/t7SKh7QFgOo)
-- eslint references
+- eslint reference
+  - [Talk slides](./slides/Code-Review-Eslint.pdf)
   - The [eslint homegpage](https://eslint.org/)
   - [Builtin rules](https://eslint.org/docs/latest/rules/)
   - [How to write custom rules](https://eslint.org/docs/latest/extend/custom-rules)

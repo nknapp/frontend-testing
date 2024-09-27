@@ -54,3 +54,4 @@ some eslint errors. Run `npm run test:lint` to find them.
   - [Builtin rules](https://eslint.org/docs/latest/rules/)
   - [How to write custom rules](https://eslint.org/docs/latest/extend/custom-rules)
   - [AST explorer](https://astexplorer.net/)
+  - [Selector syntax](https://eslint.org/docs/latest/extend/selectors)

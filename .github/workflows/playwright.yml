@@ -14,14 +14,21 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: lts/*
-    - run: |
-        ls -lR playwright-test
+
+    - name: Start containers
+      run: docker compose up -d --build
+      working-directory: playwright-docker
+
     - name: Install dependencies
       run: npm ci
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
     - name: Run Playwright tests
       run: npx playwright test
+
+    - name: Stop containers
+      if: always()
+      working-directory: playwright-docker
+      run: docker compose down
+
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:

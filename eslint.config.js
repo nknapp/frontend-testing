@@ -7,6 +7,7 @@ import eslintConfigPrettier from "eslint-config-prettier";
 import { customRules } from "./eslint-rules/index.js";
 
 export default [
+  { ignores: ["playwright-report/**"] },
   { files: ["**/*.{js,mjs,cjs,ts,vue}"] },
   { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended,

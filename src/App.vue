@@ -3,6 +3,7 @@
     <nav>
       <ul>
         <li><RouterLink to="/">Todos</RouterLink></li>
+        <li><RouterLink to="/visual">Visual Tests</RouterLink></li>
       </ul>
       <ul>
         <li>Test:</li>

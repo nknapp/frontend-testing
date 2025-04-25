@@ -32,9 +32,30 @@ I created the eslint-config with
 npm init @eslint/config@latest
 ```
 
-and when my way from there. You can check the git-history for the different things I added.
-The branch [orm2024](https://github.com/nknapp/frontend-testing/tree/orm2024) deliberately contains
-some eslint errors. Run `npm run test:lint` to find them.
+and then found my way from there. You can check the git-history for the different things I added.
+Run `npm run test:lint` to run eslint
+
+## Playwright Visual Regression Testing
+
+For my talk at the [enterJS 2025](https://enterjs.de/) I added Playwright and some visual regression tests.
+
+In this project:
+
+- [playwright.config.ts](./playwright.config.ts)
+- [playwright-docker](./playwright-docker)
+- [playwright-test](./playwright-test)
+- I also changed the [vite.config.ts](./vite.config.ts) to run only `*.test.ts` in vitest, so that vitest does
+  not try to run Playwright tests
+
+Links:
+
+- [Snapshot Path Template](https://playwright.dev/docs/api/class-testproject#test-project-snapshot-path-template)
+- [Handling animations](https://playwright.dev/docs/api/class-page#page-screenshot-option-animations)
+- [expect.toHaveScreenshot](https://playwright.dev/docs/api/class-pageassertions#page-assertions-to-have-screenshot-1)
+- [Google Gemini about prevent Video Playback](https://g.co/gemini/share/fb30e5cf7780)
+
+The Playwright setup runs the browsers in a docker container to provide the same environment on all platforms and
+make visual comparisons possible.
 
 ## Other References
 

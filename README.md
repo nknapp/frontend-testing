@@ -6,7 +6,7 @@ frontend devs often don't. And if they do, they get frustrated. But what can we 
 This repo contains the demo application for my talk about frontend testing, with examples that I use in the talk.
 You can have a look and try out things with this repo.
 
-It is **not** intended to be a fully tested, working and deployable apps. It is an example for project setup
+It is **not** intended to be a fully tested, working and deployable app. It is an example for project setup
 and unit testing. Please do not copy & paste without thinking. Use this as inspiration only.
 
 ### Mock-Service-Worker

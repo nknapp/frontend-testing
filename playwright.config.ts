@@ -12,44 +12,26 @@ export default defineConfig({
   reporter: "html",
   use: {
     /* Access host from docker-container */
-    baseURL: "http://host.docker.internal:5173",
+    baseURL: "http://localhost:5173",
     trace: "on-first-retry",
   },
-  expect: {
-    toHaveScreenshot: {
-      pathTemplate:
-        "{testDir}/{testFilePath}-snapshots/{arg}-{projectName}-linux{ext}",
-    },
-  },
-
   projects: [
     {
       name: "chromium",
       use: {
         ...devices["Desktop Chrome"],
-        /* Connect to Playwright server in container */
-        connectOptions: {
-          wsEndpoint: "ws://localhost:3000/",
-        },
       },
     },
     {
       name: "firefox",
       use: {
         ...devices["Desktop Firefox"],
-        connectOptions: {
-          wsEndpoint: "ws://localhost:3000/",
-        },
       },
     },
-
     {
       name: "webkit",
       use: {
         ...devices["Desktop Safari"],
-        connectOptions: {
-          wsEndpoint: "ws://localhost:3000/",
-        },
       },
     },
   ],

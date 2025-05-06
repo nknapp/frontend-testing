@@ -5,9 +5,9 @@
   "type": "module",
   "license": "",
   "scripts": {
-    "dev:preview": "vitest-preview",
+    "disabled:dev:preview": "vitest-preview",
+    "disabled:dev:unit": "vitest --ui",
     "dev:server": "vite",
-    "dev:unit": "vitest --ui",
     "dev:e2e": "playwright test --ui",
     "dev": "run-p dev:*",
     "test:lint": "eslint .",
